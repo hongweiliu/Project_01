@@ -1,0 +1,15 @@
+---
+  
+- name: ios command module example
+  hosts: Cisco_C9K
+  gather_facts: no
+
+  tasks:
+    - name: check ios version
+      ios_command:
+        commands: show version
+      register: show_version_output
+
+    - name: print the show version
+      debug:
+        msg: "{{show_version_output.stdout_lines}}"
