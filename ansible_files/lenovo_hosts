@@ -1,5 +1,8 @@
 [all:vars]
 ansible_connection=network_cli
+ansible_user=liuhw12
+ansible_password=
+ansible_become_password=
 
 [Aruba_WLC]
 10.100.235.1
@@ -21,11 +24,8 @@ sw3 host=10.103.1.183
 
 [Cisco_C9K:vars]
 ansible_network_os=ios
-ansible_user=lenovo
-ansible_password=Lenovo,!
 ansible_become=yes
 ansible_become_method=enable
-ansible_become_password=Lenovo,!
 ansible_log_path=/etc/ansible/ansible_c9k.log
 ansible_debug=true
 
@@ -36,7 +36,5 @@ ansible_debug=true
 
 [Juniper_4300:vars]
 ansible_network_os=junos
-ansible_user=liuhw12
-ansible_password=Lhw850911$@04
 ansible_become=yes
 ansible_become_method=enable
