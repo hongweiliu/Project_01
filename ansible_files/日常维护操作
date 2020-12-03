@@ -1,0 +1,14 @@
+密码加密
+    ansible-vault encrypt_string --vault-id root@prompt 'VyOS_SSH_password' --name 'ansible_password'
+    ansible-playbook ios_show_version.yaml --vault-id root@prompt
+
+inventory yaml文件格式检查
+    ansible_inventory -i xxx.yml --list
+
+Collection
+    如果确实module，可以看是否有下载的https://docs.ansible.com/ansible/latest/collections/index.html#list-of-collections
+
+Role
+    Ansible Galaxy
+    ansible-galaxy init new_role
+    更新role信息ansible-galaxy install mynamespace.my_role,v2.7.1 --force
